@@ -1,0 +1,16 @@
+$font-FiraSans: FiraSans, sans-serif;
+$font-Montserrat: Montserrat, sans-serif;
+@mixin font($color, $family, $weight, $size, $height, $spacing, $style){
+  color: $color;
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $spacing;
+  font-style: $style;
+}
+
+:export {
+  fontFiraSans: $font-FiraSans;
+  fontMontserrat: $font-Montserrat;
+}
