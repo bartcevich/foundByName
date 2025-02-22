@@ -1,0 +1,166 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[3].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[3].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[3].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[3].oneOf[9].use[5]!./src/components/CharacterSearch/styles.module.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.styles_wrapper__eUd8c {
+  max-width: 1920px;
+  width: 100%;
+  padding: 128px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.styles_elementsTop__Mu3hO {
+  max-width: 626px;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.styles_userInput__Cf_GN {
+  max-width: 626px;
+  width: 100%;
+  height: 64px;
+  padding: 19px 24px;
+  box-shadow: 0px 7px 12px 0px rgba(100, 100, 111, 0.2);
+  outline: none;
+}
+.styles_userInput__Cf_GN:focus {
+  outline: none;
+  box-shadow: 0px 7px 12px 0px rgba(100, 100, 111, 0.2);
+}
+.styles_userInput__Cf_GN::-moz-placeholder {
+  color: #656EC2;
+  font-family: FiraSans, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26.4px;
+  letter-spacing: 0;
+  font-style: normal;
+}
+.styles_userInput__Cf_GN::placeholder {
+  color: #656EC2;
+  font-family: FiraSans, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26.4px;
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+.styles_searchResult__F2xLk {
+  margin: 19px 44px;
+  color: #282626;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.5px;
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+.styles_cardsContainerLarge__JpyKk {
+  margin-bottom: 20px;
+  max-width: 1596px;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.styles_cardsContainerSmall__sXy5Z {
+  max-width: 1596px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.styles_card__Q7MIA {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px 34px;
+  box-shadow: 0px 7px 25px 0px rgba(100, 100, 111, 0.2);
+  outline: none;
+}
+
+.styles_card__Q7MIA:hover {
+  cursor: pointer;
+}
+
+.styles_bottomCards__zJE4m {
+  display: flex;
+  justify-content: space-between;
+  color: #767676;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-style: normal;
+}
+.styles_bottomCards__zJE4m .styles_spanGreen__7FpzQ {
+  color: #008000;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-style: normal;
+}
+.styles_bottomCards__zJE4m .styles_spanRed__LfEsK {
+  color: #ff0000;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+.styles_largeCard__NVr_k {
+  max-width: 788px;
+  width: 100%;
+  height: 262px;
+  color: #282626;
+  font-family: FiraSans, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+.styles_smallCard__8ovbv {
+  width: 518px;
+  height: 150px;
+  color: #282626;
+  font-family: FiraSans, sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-style: normal;
+}
+
+@media (max-width: 1400px) {
+  .styles_smallCard__8ovbv {
+    max-width: 518px;
+    width: 100%;
+    flex: 1 1 calc(50% - 40px);
+  }
+}
+@media (max-width: 800px) {
+  .styles_cardsContainerLarge__JpyKk {
+    flex-flow: column;
+    align-items: center;
+  }
+  .styles_cardsContainerSmall__sXy5Z {
+    flex-flow: column;
+    align-items: center;
+  }
+  .styles_smallCard__8ovbv {
+    flex: auto;
+  }
+}
