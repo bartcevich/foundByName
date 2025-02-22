@@ -32,6 +32,8 @@ const CharacterSearch = () => {
 
     const fetchCharacters = async () => {
       setLoading(true);
+      setCharacters([]);
+      setCharactersMoreTwo([]);
       try {
         const response = await fetch(
           `https://rickandmortyapi.com/api/character/?name=${searchTerm}`
@@ -85,46 +87,17 @@ const CharacterSearch = () => {
 
       {characters.length > 0 ? (
         <div className={styles.cardsContainerLarge}>
-          <ShowDataFromFetch characters={characters} />
+          <ShowDataFromFetch characters={characters} isLargeCard={true} />
         </div>
       ) : (
         searchTerm.length >= 3 && <p>Персонажи не найдены.</p>
       )}
       {charactersMoreTwo.length > 0 && (
         <div className={styles.cardsContainerSmall}>
-          {charactersMoreTwo.map((character, index) => (
-            <div
-              key={character.id}
-              onClick={() => redirect(character.url)}
-              className={`${styles.card} ${styles.smallCard}`}
-            >
-              <h2>
-                {character.name} - {character.species}
-              </h2>
-              <div className={styles.bottomCards}>
-                {character.status === "Alive" && (
-                  <p>
-                    Status:{" "}
-                    <span className={styles.spanGreen}>{character.status}</span>
-                  </p>
-                )}
-                {character.status === "Dead" && (
-                  <p>
-                    Status:{" "}
-                    <span className={styles.spanRed}>{character.status}</span>
-                  </p>
-                )}
-                {character.status !== "Alive" &&
-                  character.status !== "Dead" && (
-                    <p>Status: {character.status}</p>
-                  )}
-
-                <p>
-                  Created: {new Date(character.created).toLocaleDateString()}
-                </p>
-              </div>
-            </div>
-          ))}
+          <ShowDataFromFetch
+            characters={charactersMoreTwo}
+            isLargeCard={false}
+          />
         </div>
       )}
     </div>

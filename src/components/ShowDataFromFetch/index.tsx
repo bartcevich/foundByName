@@ -13,17 +13,28 @@ interface Character {
 
 interface CharacterProps {
   characters: Character[];
+  isLargeCard: boolean;
 }
 
-const ShowDataFromFetch: React.FC<CharacterProps> = ({ characters }) => {
+const ShowDataFromFetch: React.FC<CharacterProps> = ({
+  characters,
+  isLargeCard,
+}) => {
   console.log(characters);
+  const cardClassName = isLargeCard ? styles.largeCard : styles.smallCard;
+
+  const redirect = (url: string) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       {characters.map((character, index) => (
-        <div
+        <a
           key={character.id}
+          href={`${character.url}`}
           //   onClick={() => redirect(character.url)}
-          className={`${styles.card} ${styles.largeCard}`}
+          className={`${styles.card} ${cardClassName}`}
         >
           <h2>
             {character.name} - {character.species}
@@ -47,7 +58,7 @@ const ShowDataFromFetch: React.FC<CharacterProps> = ({ characters }) => {
 
             <p>Created: {new Date(character.created).toLocaleDateString()}</p>
           </div>
-        </div>
+        </a>
       ))}
     </>
   );
