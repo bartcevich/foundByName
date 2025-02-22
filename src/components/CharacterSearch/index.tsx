@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
 import styles from "./styles.module.scss";
+import ShowDataFromFetch from "../ShowDataFromFetch";
 
 interface Character {
   id: number;
@@ -84,39 +85,7 @@ const CharacterSearch = () => {
 
       {characters.length > 0 ? (
         <div className={styles.cardsContainerLarge}>
-          {characters.map((character, index) => (
-            <div
-              key={character.id}
-              onClick={() => redirect(character.url)}
-              className={`${styles.card} ${styles.largeCard}`}
-            >
-              <h2>
-                {character.name} - {character.species}
-              </h2>
-              <div className={styles.bottomCards}>
-                {character.status === "Alive" && (
-                  <p>
-                    Status:{" "}
-                    <span className={styles.spanGreen}>{character.status}</span>
-                  </p>
-                )}
-                {character.status === "Dead" && (
-                  <p>
-                    Status:{" "}
-                    <span className={styles.spanRed}>{character.status}</span>
-                  </p>
-                )}
-                {character.status !== "Alive" &&
-                  character.status !== "Dead" && (
-                    <p>Status: {character.status}</p>
-                  )}
-
-                <p>
-                  Created: {new Date(character.created).toLocaleDateString()}
-                </p>
-              </div>
-            </div>
-          ))}
+          <ShowDataFromFetch characters={characters} />
         </div>
       ) : (
         searchTerm.length >= 3 && <p>Персонажи не найдены.</p>
